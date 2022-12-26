@@ -14,3 +14,9 @@ EndFunc
 Func RunAU3($sFilePath, $sWorkingDir = "", $iShowFlag = @SW_SHOW, $iOptFlag = 0)
     Return Run('"' & @AutoItExe & '" /AutoIt3ExecuteScript "' & $sFilePath & '"', $sWorkingDir, $iShowFlag, $iOptFlag)
 EndFunc   ;==>_RunAU3
+
+Func StartDepScript($depName)
+	$sScriptPath = @ScriptDir & "/scripts/" & $depName & "/" & $depName & ".au3"
+
+	RunAu3($sScriptPath)
+EndFunc
